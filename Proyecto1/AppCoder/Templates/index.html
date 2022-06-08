@@ -22,10 +22,15 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Log out</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Perfil</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href={% url 'index' %}>Home</a></li>
+                        {% if not request.user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Login</a></li>
+                        {% endif %}
+
+                        {% if request.user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href={% url 'profile' %}>  Hola, {{user.username }} </a></li>
+                         {% endif %} 
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href={% url 'read_post' %}>Home</a></li>
                     </ul>
-                </div>
             </div>
         </nav>
         <!-- Page header with logo and tagline-->

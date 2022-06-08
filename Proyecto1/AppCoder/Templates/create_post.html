@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>CRIPTO BLOG</title>
+        <title>TECH-BLOG</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -16,12 +16,12 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">CRIPTO BLOG</a>
+                <a class="navbar-brand" href="#!">TECH BLOG</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Log out</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'about' %}>About</a></li>
                         {% if not request.user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Login</a></li>
                         {% endif %}
@@ -41,7 +41,7 @@
                   <header class="py-5 bg-light border-bottom mb-4">
                      <div class="container">
                          <div class="text-center my-5">
-                             <h1 class="fw-bolder" style=color:cadetblue >Crear mi Blog!</h1>
+                             <h1 class="fw-bolder" style=color:#e74914 >CREAR POST!</h1>
                          </div>
                      </div>
                  </header>
@@ -70,21 +70,21 @@
                          <header class="mb-4">
                              <!-- Post title-->
                              
-                             <h2 class="fw-bolder mb-1" style=color:cadetblue >Título:</h2>
+                             <h2 class="fw-bolder mb-1" style=color:#e74914 >Título:</h2>
                              <p class="fs-5 mb-4">{{ formu.title }}</p>
                              <!-- Post meta content-->
-                             <h3 class="fw-bolder mb-1" style=color:cadetblue> Fecha: </div>
+                             <h3 class="fw-bolder mb-1" style=color:#e74914> Fecha: </div>
                                  <p class="fs-5 mb-4">{{ formu.date }}</p>
                              <!-- Post categories-->
-                             <h3 class="fw-bolder mb-1" style=color:cadetblue >Subtítulo: </h3>
+                             <h3 class="fw-bolder mb-1" style=color:#e74914 >Subtítulo: </h3>
                              <p class="fs-5 mb-4">{{ formu.subtitle }}</p>
                          </header>
                          <!-- Preview image figure-->
-                         <h3 class="fw-bolder mb-1" style=color:cadetblue >Cargar Imagen: </h3>
+                         <h3 class="fw-bolder mb-1" style=color:#e74914 >Cargar Imagen: </h3>
                          <figure class="mb-4"><img class="img-fluid rounded" /> {{ formu.image }} </figure>
                          <!-- Post content-->
                          <section class="mb-5">
-                             <h3 class="fw-bolder mb-1" style=color:cadetblue >Contenido:</h3>
+                             <h3 class="fw-bolder mb-1" style=color:#e74914 >Contenido:</h3>
                              <p class="fs-5 mb-4">{{ formu.content }}</p>
                               </section>
                      </article>

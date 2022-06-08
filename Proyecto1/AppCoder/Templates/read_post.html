@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>CRIPTO BLOG</title>
+        <title>TECH-BLOG</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -16,12 +16,12 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">CRIPTO BLOG</a>
+                <a class="navbar-brand" href="#!">TECH BLOG</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Log out</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'about' %}>About</a></li>
                         {% if not request.user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Login</a></li>
                         {% endif %}
@@ -30,6 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href={% url 'profile' %}>  Hola, {{user.username }} </a></li>
                          {% endif %} 
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href={% url 'read_post' %}>Home</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -38,7 +39,11 @@
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder" style=color:cadetblue >Bienvenido a CRIPTO BLOG!</h1>
+                    <h1 class="fw-bolder" style=color:#e74914 > Bienvenido TECH-BLOGGER!</h1>
+                    <br>
+                    <p class="" style=color:grey > Este es tu panel principal, en él podrás ver los últimos posteos de todos los usuarios! </p>
+                    <br>
+                    <p class="" style=color:grey > Busca el botón "CREAR NUEVO POST" y anímate a crear tu primer post </p>
                 </div>
             </div>
         </header>
@@ -87,6 +92,20 @@
             <a class="btn btn-primary" href= "{% url 'create_post'  %}" > Nuevo Post </a> 
         
         </p></div>
+
+        <br>
+        
+            <div class="card mb-4">
+                    <div class="card-header text-center">Foro de la comunidad</div>
+
+                   
+                        <a class="btn btn-primary" href= "{% url 'create_foro'  %}" > FORO </a> 
+
+                      
+                    </div>
+            </div>
+            
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>

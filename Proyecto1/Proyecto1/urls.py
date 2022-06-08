@@ -30,7 +30,7 @@ urlpatterns = [
     path('register/', register, name = "register"),
     path('login/', login_request, name = "login"),
     path('logout/', LogoutView.as_view(template_name='acceso.html'), name='logout'),
-    path('read_post/', read_post, name = "read_post"),
+    path('read_post/', read_post,  name = "read_post"),
     path('delete/<pk>', delete, name = "delete"),
     path('update_post/<pk>', update_post, name = "update_post"),
     path('create_post/', create_post, name = "create_post"),
@@ -42,7 +42,8 @@ urlpatterns = [
     path('post/', posteo, name = "posteo"),
     path('contacs/', buscar_usuario, name = "buscar_usuario"),
     path('about/', about, name = "about"),
-
+    path('create_foro/', create_foro , name = "create_foro"), 
+    
 
 
 ]

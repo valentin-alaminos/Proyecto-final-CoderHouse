@@ -19,4 +19,10 @@ class post(models.Model):
     def __str__(self):
         return self.title
 
+class comunidad(models.Model):
+    nombre = models.CharField(max_length=50)
+    descripcion = models.TextField()
+    
+    def __str__(self):
+        return self.descripcion
 

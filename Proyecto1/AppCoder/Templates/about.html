@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>CRIPTO BLOG</title>
+        <title>TECH-BLOG</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -21,7 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Log out</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'about' %}>About</a></li>
                         {% if not request.user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href={% url 'acceso' %}>Login</a></li>
                         {% endif %}
@@ -36,7 +36,21 @@
         </nav>
         <!-- Page content-->
     
-        <p> Esto es el about </p>
+         <strong> Hola! Mi nombre es Valentín Alaminos. </strong> 
+         
+        <p>Tengo 24 años, vivo en Río Cuarto y soy Licenciado en Administración.</p>
+        <p>Hace unos años me comento a gustar el mundo de la programacion y actualmente estoy estudiando programacion mediante cursos online como el de Python en CoderHouse</p>
+        <div>      
+            <div>
+                <div> 
+                    <div class="container">
+                        <div class="col-lg-8"> 
+                            <figure><img class="card-img-top" src="https://scontent.fcor2-2.fna.fbcdn.net/v/t1.6435-9/171639608_101518558736068_3869830102178499711_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=f8UTL6dWah4AX85IdsF&_nc_ht=scontent.fcor2-2.fna&oh=00_AT_IhFsNFTcX0QuGLT96mr38oRR2Y0vTNWFHRo7QSZ6OLA&oe=62C528F2" alt=""> </figure>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
 
 
 

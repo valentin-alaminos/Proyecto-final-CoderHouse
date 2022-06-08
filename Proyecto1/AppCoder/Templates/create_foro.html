@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TECH-BLOG</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'AppCoder/css.tech/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        
+        <!-- Masthead-->
+        <header class="masthead">
+            <div>
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">TECH BLOG</h1>
+                        <hr class="divider" />
+                    </div>
+                    
+                        <p class="text-white-75 mb-5">"Foro de la comunidad es un lugar donde todos los usuarios pueden dejar sus comentarios, ideas para publicaciones e inquietudes (de forma anónima o no)! </p>
+                          
+                        <form action="{% url 'create_foro' %}" method="POST" >
+                            {% csrf_token %}
+                            
+                            <p> INGRESE SU COMENTARIO: {{ f_comunidad.descripcion }} </p>
+                            
+                            <p> INGRESE EL NOMBRE CON CUAL QUIERE SER IDENTIFICADO: {{ f_comunidad.nombre}} </p>
+                        <button class="btn btn-primary btn-xl" type="submit"> CREAR </button>
+                        
+                        <br>
+                        <br>
+                    
+                        </form> 
+
+                        {% for f in foros %}
+
+                         <p> {{ f.nombre }} : {{ f.descripcion}} </p>
+                    
+                        {% endfor %}
+                        
+                        <br>
+                        <br>
+                        <br>
+                        <a class="btn btn-primary" href= "{% url 'read_post'  %}" > VOLVER </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        <br>
+        <br>
+        
+    </body>
+</html>
+
+      
+        
+               
+           
+
+
+
+
+
+    

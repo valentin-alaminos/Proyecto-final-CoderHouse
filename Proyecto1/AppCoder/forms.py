@@ -41,6 +41,11 @@ class update_userform(forms.Form):
         fields = ['username', 'email', 'password1', 'password2']
         help_texts = {k:"" for k in fields}
 
+class Foro(forms.Form):
+    descripcion = forms.CharField(label= 'descripcion', widget=forms.Textarea)
+    nombre = forms.CharField(label= 'nombre', max_length=100)
+
+
 
 
 
